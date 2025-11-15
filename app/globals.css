@@ -1,0 +1,388 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family:  "TH Sarabun New", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #ffffff !important;
+  color: #000000;
+}
+
+body {
+  min-height: 100vh;
+}
+
+main {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* center container */
+.screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  background: #ffffff !important;
+}
+
+/* holo glass card */
+.holo-card {
+  position: relative;
+  max-width: 640px;
+  width: 100%;
+  padding: 32px 28px;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.7);
+}
+
+/* type */
+h1, h2, h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+/* input + button */
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,0.4);
+  background: #ffffff;
+  color: #000000;
+  font-size: 1.2rem;
+  margin-top: 16px;
+}
+
+.input::placeholder {
+  color: rgba(0,0,0,0.45);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 10px 22px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, rgba(155,194,252,0.9), rgba(219,182,255,0.9), rgba(255,224,199,0.85));
+  box-shadow:
+    0 8px 18px rgba(0,0,0,0.35),
+    0 0 14px rgba(155,194,252,0.35),
+    0 0 18px rgba(219,182,255,0.32),
+    0 0 22px rgba(255,224,199,0.28);
+  color: #000000;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.08) saturate(120%);
+  box-shadow:
+    0 0 10px rgba(180,200,255,0.35),
+    0 0 14px rgba(210,180,255,0.32);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: #f7f2eb;
+}
+
+/* choices */
+.choice-grid {
+  margin-top: 24px;
+  display: grid;
+  gap: 12px;
+}
+
+.choice-btn {
+  width: 100%;
+  text-align: left;
+  padding: 10px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,0.25);
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  color: #000000;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+}
+
+.choice-btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(197,233,255,0.9);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+  background: #ffffff;
+}
+
+/* back link */
+.back-link {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  cursor: pointer;
+  opacity: 0.8;
+  color: #000000;
+}
+
+.back-link:hover {
+  opacity: 1;
+}
+
+/* typewriter */
+.typewriter {
+  white-space: pre-line;
+  font-size: 1.35rem;
+  line-height: 1.6;
+}
+
+/* result / card */
+.result-tag {
+  display: block;
+  text-align: center;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+
+.affirm-list {
+  margin-top: 10px;
+  font-size: 1.25rem;
+}
+
+.affirm-list li {
+  margin-bottom: 4px;
+}
+
+/* IG card */
+.card-wrapper {
+  max-width: 300px;
+  aspect-ratio: 9 / 18;
+  border-radius: 22px;
+  padding: 16px;
+  background: url("/bg.png") no-repeat center center / cover;
+  position: relative;
+  overflow: hidden;
+  color: #16141c;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-inner {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  border-radius: 22px;
+  padding: 18px 16px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(18px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  text-align: center;
+  font-size: 1.35rem;
+  line-height: 1.45;
+}
+
+.card-inner h1, .card-inner h2 {
+  font-size: 2.1rem;
+}
+.card-inner p {
+  font-size: 1.45rem;
+}
+
+.card-footer {
+  font-size: 1.0rem;
+  opacity: 0.86;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.2rem;       /* same size as .card-footer ("บันทึก") */
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 0 auto 8px auto; /* center horizontally and add slight spacing */
+}
+
+button {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.result-layout {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.result-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.result-icon {
+  width: 36px !important;
+  height: 36px !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto 10px auto !important;
+  pointer-events: none;
+}
+
+.result-icon img {
+  width: 36px !important;
+  height: 36px !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto !important;
+  pointer-events: none;
+}
+
+.result-name {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.result-description {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  line-height: 1.5;
+  max-width: 420px;
+}
+
+/* =========================
+   RESPONSIVE ADJUSTMENTS
+========================= */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p, .typewriter {
+    font-size: 1.15rem;
+  }
+
+  .holo-card {
+    padding: 24px 20px;
+    border-radius: 22px;
+  }
+
+  .choice-btn {
+    font-size: 1.05rem;
+    padding: 10px 12px;
+  }
+
+  .result-layout {
+    max-width: 360px;
+    padding: 0 10px;
+  }
+
+  .result-title {
+    font-size: 2rem;
+  }
+
+  .result-icon,
+  .result-icon img {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .result-name {
+    font-size: 1.8rem;
+  }
+
+  .result-description {
+    font-size: 1.2rem;
+    max-width: 330px;
+  }
+
+  .card-wrapper {
+    max-width: 240px;
+    border-radius: 18px;
+  }
+
+  .card-inner h1, .card-inner h2 {
+    font-size: 1.7rem;
+  }
+
+  .btn {
+    font-size: 1.05rem;
+    padding: 9px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.55rem;
+  }
+
+  .result-title {
+    font-size: 1.7rem;
+  }
+
+  .result-icon,
+  .result-icon img {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .choice-grid {
+    gap: 10px;
+  }
+
+  .holo-card {
+    padding: 20px 16px;
+  }
+}
