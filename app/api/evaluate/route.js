@@ -30,10 +30,13 @@ export async function POST(req) {
 
   const archetype = ARCHETYPES[winner];
 
-  return NextResponse.json({
+  return new Response(JSON.stringify({
     name,
     winner,
     score,
     archetype
+  }), {
+    status: 200,
+    headers: { "Content-Type": "application/json" }
   });
 }

@@ -52,6 +52,22 @@ export default function CardPage() {
           className="card-wrapper"
         >
           <div className="card-inner">
+            {result?.archetype?.icon && (
+              <img
+                src={
+                  result.archetype.icon?.startsWith("/")
+                    ? result.archetype.icon
+                    : `/${result.archetype.icon}.png`
+                }
+                style={{
+                  width: "120px",
+                  height: "120px",
+                  objectFit: "contain",
+                  margin: "0 auto 12px auto",
+                  display: "block",
+                }}
+              />
+            )}
             <div>
               <div style={{ fontSize: "1.0rem", opacity: 0.8 }}>
                 Be Your Change – Journey Within
@@ -72,7 +88,7 @@ export default function CardPage() {
             </div>
 
             <div className="card-footer">
-              <div>หยิบอนาคตไว้ในมือฉัน</div>
+              <div>แคทเทอรีนยิงมันสิ</div>
               <div style={{ fontSize: "0.9rem" }}>beyourchange • journey within</div>
             </div>
           </div>

@@ -214,7 +214,8 @@ p {
   z-index: 1;
   height: 100%;
   border-radius: 22px;
-  padding: 18px 16px;
+  padding: 28px 28px;
+  width: 88%;
   background: rgba(255,255,255,0.2);
   backdrop-filter: blur(18px);
   display: flex;
@@ -271,8 +272,8 @@ button {
 }
 
 .result-icon {
-  width: 36px !important;
-  height: 36px !important;
+  width: 120px !important;
+  height: 120px !important;
   object-fit: contain !important;
   display: block !important;
   margin: 0 auto 10px auto !important;
@@ -280,8 +281,8 @@ button {
 }
 
 .result-icon img {
-  width: 36px !important;
-  height: 36px !important;
+  width: 120px !important;
+  height: 120px !important;
   object-fit: contain !important;
   display: block !important;
   margin: 0 auto !important;
@@ -335,8 +336,8 @@ button {
 
   .result-icon,
   .result-icon img {
-    width: 48px !important;
-    height: 48px !important;
+    width: 100px !important;
+    height: 100px !important;
   }
 
   .result-name {
@@ -374,8 +375,8 @@ button {
 
   .result-icon,
   .result-icon img {
-    width: 42px !important;
-    height: 42px !important;
+    width: 90px !important;
+    height: 90px !important;
   }
 
   .choice-grid {
