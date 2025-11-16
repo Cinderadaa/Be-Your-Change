@@ -30,33 +30,49 @@ export default function IntroPage() {
   };
 
   return (
-    <main
-      className="screen bg-cover"
-      style={{ backgroundImage: "url(/bg1.png)" }}
-    >
+    <main className="relative min-h-screen flex items-start justify-center px-4 pt-24 pb-10 bg-transparent">
       <FogOverlay />
-      <HoloCard>
-        <Typewriter text={introText} />
+      <div className="relative z-10 w-full max-w-md">
+        <HoloCard>
+          <div className="space-y-6">
+            <div className="text-left">
+              <Typewriter text={introText} />
+            </div>
 
-        <input
-          id="nameInput"
-          className="input"
-          placeholder="ขอรู้จักชื่อคุณหน่อย..."
-          value={name}
-          onChange={e => setName(e.target.value)}
-        />
+            <div className="space-y-3">
+              <label
+                htmlFor="nameInput"
+                className="block text-sm text-neutral-500"
+              >
+                ก่อนเริ่มเดินทาง อยากให้เรารู้จักชื่อคุณหน่อย 🙂
+              </label>
 
-        {name.trim() && (
-          <p style={{ marginTop: 12, fontSize: "1.3rem" }}>
-            ดีใจที่คุณมานะ, <b>{name.trim()}</b>
-            {"\n"}โลกภายนอกวุ่นวายพอแล้ว ตอนนี้ขอให้มีแค่คุณกับหัวใจตัวเอง
-          </p>
-        )}
+              <input
+                id="nameInput"
+                className="input w-full"
+                placeholder="พิมพ์ชื่อเล่นของคุณ..."
+                value={name}
+                onChange={e => setName(e.target.value)}
+              />
 
-        <button className="btn btn-primary" onClick={handleStart}>
-          เริ่มเส้นทาง
-        </button>
-      </HoloCard>
+              {name.trim() && (
+                <p className="mt-1 text-sm leading-relaxed text-neutral-600">
+                  ดีใจที่คุณมานะ, <b>{name.trim()}</b>
+                  <br />
+                  โลกภายนอกวุ่นวายพอแล้ว ตอนนี้ขอให้มีแค่คุณกับหัวใจตัวเอง
+                </p>
+              )}
+            </div>
+
+            <button
+              className="btn btn-primary w-full"
+              onClick={handleStart}
+            >
+              เริ่มเส้นทาง
+            </button>
+          </div>
+        </HoloCard>
+      </div>
     </main>
   );
 }

@@ -18,6 +18,7 @@ export default function ResultPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [name, setName] = useState("เพื่อนใหม่");
+  const displayName = (name && name.trim()) || "เพื่อนใหม่";
   const [result, setResult] = useState(null);
   const hasProcessed = useRef(false);
 
@@ -67,8 +68,12 @@ export default function ResultPage() {
     }
   }, []);
 
-  const handleCard = () => {
-    router.push("/card");
+  const handleApply = () => {
+    window.open(
+      "https://forms.gle/XdoS3JpfQXr5VDof8",
+      "_blank",
+      "noopener,noreferrer"
+    );
   };
 
   return (
@@ -81,16 +86,23 @@ export default function ResultPage() {
         {loading && <p>กำลังฟังเสียงหัวใจคุณอยู่…</p>}
 
         {!loading && result && (
-          <>
-            <div className="result-tag">Archetype ของคุณ</div>
+          <div className="result-layout">
+            <div className="result-tag">
+              <span>Archetype ของ</span>
+              <span className="result-pill-name">{displayName}</span>
+            </div>
             <img
               src={iconMap[result.winner.toLowerCase()] || "/seed.png"}
               alt={result.winner}
               className="result-icon"
             />
             <h1>{result.archetype.title}</h1>
-            <p style={{ marginTop: 6 }}>{result.archetype.meaning}</p>
-            <p style={{ marginTop: 12 }}>{result.archetype.warm}</p>
+            <p>{result.archetype.meaning}</p>
+            <p>{result.archetype.warm}</p>
+
+            <p className="result-subtitle">
+              ประโยคไหนที่คุณอยากเก็บไว้เตือนใจตัวเองในวันนี้:
+            </p>
 
             <ul className="affirm-list">
               {result.archetype.affirm.map((a, i) => (
@@ -98,10 +110,10 @@ export default function ResultPage() {
               ))}
             </ul>
 
-            <button className="btn btn-primary" onClick={handleCard}>
-              สร้างการ์ดของฉัน
+            <button className="btn btn-primary" onClick={handleApply}>
+              สมัครเข้าร่วมโครงการ
             </button>
-          </>
+          </div>
         )}
 
         {!loading && !result && (
