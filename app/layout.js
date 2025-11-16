@@ -4,7 +4,10 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Be Your Change – Journey Within",
-  description: "Interactive storytelling self-reflection journey."
+  description: "Interactive storytelling self-reflection journey.",
+  icons: {
+    icon: "/byc_logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {
