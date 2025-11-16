@@ -67,6 +67,7 @@ export default function IntroPage() {
             <button
               className="btn btn-primary w-full"
               onClick={handleStart}
+              disabled={!name.trim()}
             >
               เริ่มเส้นทาง
             </button>
