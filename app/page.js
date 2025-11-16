@@ -7,7 +7,7 @@ import HoloCard from "@/components/HoloCard";
 import FogOverlay from "@/components/FogOverlay";
 
 const introText = `
-ลมหายใจคุณก็เหนื่อยมาพอแล้วนะ
+คุณก็เหนื่อยมาพอแล้วนะ
 วันนี้ไม่ต้องรีบเป็นคนเก่ง
 มาลองคุยกับหัวใจคุณสักแป๊บดีไหม
 `;
