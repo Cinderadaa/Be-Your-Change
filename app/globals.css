@@ -58,7 +58,7 @@ a {
   position: relative;
   max-width: 640px;
   width: 100%;
-  padding: 32px 28px;
+  padding: 18px 16px 18px;
   border-radius: 28px;
   overflow: hidden;
   background: radial-gradient(
@@ -164,7 +164,7 @@ p {
   cursor: pointer;
   font-size: 1.1rem;
   padding: 10px 22px;
-  margin-top: 20px;
+  margin-top: 16px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -337,9 +337,9 @@ p {
   letter-spacing: 0.02em;
   background: linear-gradient(
     135deg,
-    #3b82f6,  /* ฟ้าน้ำเงินเข้มขึ้น */
-    #6366f1,  /* ม่วงอมฟ้า */
-    #f97316   /* ส้มอุ่น ๆ */
+    #22b3ff,  /* ฟ้าแบบโลโก้ */
+    #6f6dff,  /* ม่วงกลาง */
+    #ff57b3   /* ชมพู/ม่วงแดง ปลายโลโก้ */
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -430,8 +430,8 @@ button {
   align-items: center;
   max-width: 480px;
   margin: 0 auto;
-  padding: 8px 0 12px;
-  gap: 8px;
+  padding: 6px 0 10px;
+  gap: 6px;
 }
 
 
@@ -439,7 +439,7 @@ button {
 .result-layout .affirm-list {
   text-align: left;
   max-width: 440px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .result-layout h1 {
@@ -576,7 +576,41 @@ button {
   }
 
   .holo-card {
-    padding: 22px 18px 20px;
+    padding: 18px 16px 18px;
+  }
+
+  .result-layout {
+    max-width: 340px;
+    padding: 4px 4px 8px;
+    gap: 4px;
+  }
+
+  .result-tag {
+    font-size: 0.95rem;
+    padding: 8px 18px;
+    margin-bottom: 10px;
+  }
+
+  .result-pill-name {
+    font-size: 1.05rem;
+    margin-top: 2px;
+  }
+
+  .result-layout p,
+  .result-layout .affirm-list {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+
+  .affirm-list {
+    margin-top: 4px;
+  }
+
+  .btn {
+    margin-top: 12px;
+    font-size: 1rem;
+    padding: 8px 16px;
   }
 }
 
