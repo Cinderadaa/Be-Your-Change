@@ -70,7 +70,7 @@ export default function CardPage() {
             )}
             <div>
               <div style={{ fontSize: "1.0rem", opacity: 0.8 }}>
-                Be Your Change – Journey Within
+                {/* Be Your Change – Journey Within */}
               </div>
               <div style={{ marginTop: 4, fontSize: "1.4rem", fontWeight: 600 }}>
                 {name}
@@ -89,7 +89,7 @@ export default function CardPage() {
 
             <div className="card-footer">
               <div>แคทเทอรีนยิงมันสิ</div>
-              <div style={{ fontSize: "0.9rem" }}>beyourchange • journey within</div>
+              <div style={{ fontSize: "0.9rem" }}>beyourchange</div>
             </div>
           </div>
         </div>

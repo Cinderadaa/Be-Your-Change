@@ -9,13 +9,12 @@ export async function POST(req) {
 
     const { data, error } = await supabase
       .from("byc_results")
-      .insert([
-        {
+      .insert({
           name,
           archetype,
-          created_at: new Date(),
-        }
-      ]);
+          // answers,
+          created_at: new Date()
+        });
 
     if (error) {
       console.error("Supabase insert error:", error);

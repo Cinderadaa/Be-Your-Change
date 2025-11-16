@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import HoloCard from "@/components/HoloCard";
 import FogOverlay from "@/components/FogOverlay";
@@ -19,13 +19,20 @@ export default function ResultPage() {
   const [loading, setLoading] = useState(true);
   const [name, setName] = useState("เพื่อนใหม่");
   const [result, setResult] = useState(null);
+  const hasProcessed = useRef(false);
 
   useEffect(() => {
+     if (hasProcessed.current) return;
+    hasProcessed.current = true;
+
     const storedName = localStorage.getItem("byc_name");
     if (storedName) setName(storedName);
 
     const answersRaw = localStorage.getItem("byc_answers") || "[]";
     const answers = JSON.parse(answersRaw);
+    const runId = localStorage.getItem("byc_run_id");
+    const savedRunId = localStorage.getItem("byc_saved_run_id");
+
 
     async function fetchResult() {
       const res = await fetch("/api/evaluate", {
@@ -38,11 +45,19 @@ export default function ResultPage() {
       localStorage.setItem("byc_result", JSON.stringify(data));
       setLoading(false);
 
+        if (runId && savedRunId === runId) return;
+
+      const payload = {
+        name: data.name,
+        archetype: data.archetype?.title || data.winner
+      };
+
       await fetch("/api/save", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
+        body: JSON.stringify(payload)
       });
+       if (runId) localStorage.setItem("byc_saved_run_id", runId);
     }
 
     if (answers.length > 0) {
@@ -79,7 +94,7 @@ export default function ResultPage() {
 
             <ul className="affirm-list">
               {result.archetype.affirm.map((a, i) => (
-                <li key={i}>• {a}</li>
+                <li key={i}>{a}</li>
               ))}
             </ul>
 

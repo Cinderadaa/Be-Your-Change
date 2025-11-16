@@ -148,6 +148,12 @@ p {
   background: #ffffff;
 }
 
+.question-text {
+  display: block;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
 /* back link */
 .back-link {
   font-size: 1.1rem;
@@ -162,10 +168,14 @@ p {
 }
 
 /* typewriter */
-.typewriter {
-  white-space: pre-line;
-  font-size: 1.35rem;
-  line-height: 1.6;
+.typewriter,
+.question-text {
+  white-space: pre-line !important;
+  font-size: 1.5rem !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.2px;
 }
 
 /* result / card */

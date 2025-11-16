@@ -48,7 +48,7 @@ export default function QuestionPage({ params }) {
       <FogOverlay />
       <HoloCard>
         <BackButton />
-        <h1>{question.question}</h1>
+        <p className="typewriter question-text">{question.question}</p>
         <div className="choice-grid">
           {question.options.map(opt => (
             <ChoiceButton

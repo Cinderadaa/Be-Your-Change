@@ -18,8 +18,14 @@ export default function IntroPage() {
 
   const handleStart = () => {
     const trimmed = name.trim() || "เพื่อนใหม่";
+    const runId =
+      typeof crypto !== "undefined" && crypto.randomUUID
+        ? crypto.randomUUID()
+        : Date.now().toString();
     localStorage.setItem("byc_name", trimmed);
     localStorage.setItem("byc_answers", JSON.stringify([]));
+    localStorage.setItem("byc_run_id", runId);
+    localStorage.removeItem("byc_saved_run_id");
     router.push("/question/1");
   };
 
