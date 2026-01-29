@@ -19,38 +19,26 @@ export default function AboutPage() {
 
         {/* Partners Section */}
         <section className="w-full">
-          <h2 className="text-xl font-semibold mb-8 text-left">
+          <h2 className="text-xl font-semibold mb-12 text-left">
             Project Partners
           </h2>
 
-          <div className="flex flex-row items-start justify-start gap-20 w-full">
-            {/* WE Tech Consulting */}
-            <div className="flex flex-col items-center">
-              <Image
-                src="/WE.png"
-                alt="WE Tech Consulting"
-                width={160}
-                height={160}
-                className="object-contain"
-              />
-              <p className="mt-3 text-sm text-black/60 text-center">
-                WE Tech Consulting
-              </p>
-            </div>
+          <div className="flex flex-row items-center gap-20">
+            <Image
+              src="/WE.png"
+              alt="WE Tech Consulting"
+              width={160}
+              height={160}
+              className="object-contain"
+            />
 
-            {/* Be PSY You */}
-            <div className="flex flex-col items-center">
-              <Image
-                src="/BePSYYou.PNG"
-                alt="Be PSY You"
-                width={160}
-                height={160}
-                className="object-contain"
-              />
-              <p className="mt-3 text-sm text-black/60 text-center">
-                Be PSY You
-              </p>
-            </div>
+            <Image
+              src="/BePSYYou.PNG"
+              alt="Be PSY You"
+              width={160}
+              height={160}
+              className="object-contain"
+            />
           </div>
         </section>
       </div>
