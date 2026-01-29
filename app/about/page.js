@@ -35,8 +35,8 @@ export default function AboutPage() {
             <Image
               src="/BePSYYou.PNG"
               alt="Be PSY You"
-              width={160}
-              height={160}
+              width={200}
+              height={200}
               className="object-contain"
             />
           </div>
