@@ -23,22 +23,21 @@ export default function AboutPage() {
             Project Partners
           </h2>
 
-          <div className="flex flex-row items-center gap-20">
-            <Image
-              src="/WE.png"
-              alt="WE Tech Consulting"
-              width={160}
-              height={160}
-              className="object-contain"
-            />
-
-            <Image
-              src="/BePSYYou.PNG"
-              alt="Be PSY You"
-              width={200}
-              height={200}
-              className="object-contain"
-            />
+          <div className="flex flex-row items-center justify-center gap-20">
+              <Image
+                src="/WE.png"
+                alt="WE Tech Consulting"
+                width={160}
+                height={160}
+                className="object-contain"
+              />
+              <Image
+                src="/BePSYYou.PNG"
+                alt="Be PSY You"
+                width={300}
+                height={140}
+                className="object-contain py-2"
+              />
           </div>
         </section>
       </div>
