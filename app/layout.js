@@ -31,12 +31,10 @@ export default function RootLayout({ children }) {
             </Link>
             <div className="glass-nav-right">
               <a
-                href="https://forms.gle/XdoS3JpfQXr5VDof8"
-                target="_blank"
-                rel="noreferrer"
-                className="glass-link"
+                href="/about"
+                className="glass-link glass-link-secondary"
               >
-                Apply
+                About
               </a>
               <a
                 href="https://www.instagram.com/beyourchange.kmutt?igsh=dmVtbXZrN2hqMmxx&utm_source=qr"
